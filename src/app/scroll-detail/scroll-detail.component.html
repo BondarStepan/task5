@@ -1,0 +1,11 @@
+<div *ngIf="scroll">
+  <h3>{{scroll.title | uppercase}} Details</h3>
+  <div><span>id: </span>{{scroll.id}}</div>
+  <div>
+    <label>name:
+
+      <input [(ngModel)]="scroll.title" placeholder="title" (ngModelChange)="onNameChange($event)"/>
+    </label>
+  </div>
+</div>
+

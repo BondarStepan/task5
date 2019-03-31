@@ -1,0 +1,11 @@
+<h2>This is scroll's service.</h2>
+
+<h2 [ngStyle]="{color: 'blue'}">My selectedScrolls</h2>
+<ul class="scrolls">
+  <li *ngFor="let scroll of scrolls" [class.selected]="scroll === selectedScroll" (click)="onSelect(scroll)">
+    <span class="badge">{{scroll.id}}</span> {{scroll.title}}
+  </li>
+</ul>
+
+<app-scroll-detail [scroll]="selectedScroll" (userNameChange)="gotOutput($event)"></app-scroll-detail>
+<p>{{selectedScroll.title}}</p>
